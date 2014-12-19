@@ -51,7 +51,7 @@ public class Zoo implements Manage {
         System.out.println("One Year Later");
         System.out.println("==========");
         for (int i = 0; i < zooMember.size(); i++) {
-            zooMember.get(i).getOlder();
+            zooMember.get(i).growOld();
         }
     }
 
@@ -63,12 +63,12 @@ public class Zoo implements Manage {
         return false;
     }
 
-    public ArrayList<Animal> fiveAgeAnimal() {
-        ArrayList<Animal> fiveAge = new ArrayList();
-        Animal temp = new Animal();
+    public ArrayList<Life> fiveAgeAnimal() {
+        ArrayList<Life> fiveAge = new ArrayList();
+        Life temp;
         for (int i = 0; i < zooMember.size(); i++) {
             if (!(zooMember.get(i) instanceof Robot) && checkAge(i)) {
-                temp = ((Animal) zooMember.get(i));
+                temp = ((Life) zooMember.get(i));
                 fiveAge.add(temp);
             }
         }
@@ -83,11 +83,10 @@ public class Zoo implements Manage {
     @Override
     public void feeding() {
         System.out.println("==========");
-        System.out.println("gom.cave.Zoo Meal Time");
+        System.out.println("Zoo Meal Time");
         System.out.println("==========");
         for (int i = 0; i < zooMember.size(); i++) {
             zooMember.get(i).eat();
         }
-
     }
 }

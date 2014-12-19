@@ -1,11 +1,13 @@
 package gom.cave.Animal;
-public class Owl extends Animal {
-    Owl() {
 
-    }
+import gom.cave.Life;
+
+public class Owl extends Animal implements Life {
 
     public Owl(String name) {
-        super(name);
+
+        this.name = name;
+        this.age = 0;
     }
 
     public void eat() {
@@ -14,5 +16,25 @@ public class Owl extends Animal {
 
     public String toString() {
         return "Owl's name is " + name + " Age is " + age;
+    }
+
+    @Override
+    public void growOld() {
+        this.age++;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public int getAge() {
+        return this.age;
+    }
+
+    @Override
+    public String getType() {
+        return "Owl";
     }
 }

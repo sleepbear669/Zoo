@@ -1,36 +1,17 @@
 package gom.cave.Animal;
 import gom.cave.Life;
 
-public class Animal implements Life {
-    protected String name;
-    protected int age;
+public abstract class Animal {
+    String name;
+    int age;
 
-    public Animal() {
-    }
+    public abstract String toString();
 
-    Animal(String name) {
-        this.name = name;
-    }
 
-    public void eat() {
-    }
 
-    public String toString() {
-        return "";
-    }
+    public abstract String getName();
 
-    public void getOlder() {
-        this.age += 1;
-    }
+    public abstract int getAge();
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-    public String getType(){
-        return "gom/cave/Animal";
-    }
+    public abstract String getType();
 }

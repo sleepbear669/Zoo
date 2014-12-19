@@ -17,7 +17,8 @@ public class Robot implements Life {
         System.out.println("gom.cave.Robot Energy charging");
     }
 
-    public void getOlder() {
+    @Override
+    public void growOld() {
         this.age += 1;
     }
 

@@ -3,10 +3,10 @@ package gom.cave;
 import java.util.ArrayList;
 import gom.cave.Animal.*;
 public class Hospital implements Manage{
-    private ArrayList<Animal> hospitalMember;
+    private ArrayList<Life> hospitalMember;
     private int count;
     Hospital(){
-        hospitalMember = new ArrayList<Animal>();
+        hospitalMember = new ArrayList<Life>();
         count = 0;
     }
     @Override
@@ -24,10 +24,10 @@ public class Hospital implements Manage{
         System.out.println("One Year Later");
         System.out.println("==========");
         for (int i = 0; i < count; i++) {
-            hospitalMember.get(i).getOlder();
+            hospitalMember.get(i).growOld();
         }
     }
-    public void hospitalization(ArrayList<Animal> older) {
+    public void hospitalization(ArrayList<Life> older) {
         if(!older.isEmpty()){
             System.out.println(older.size() + "gom.cave.Animal Come here");
             for (int i = 0; i < older.size(); i++) {
