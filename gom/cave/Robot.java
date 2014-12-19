@@ -36,4 +36,8 @@ public class Robot extends Member implements Behavior {
         return "Robot";
     }
 
+    @Override
+    public boolean checkAge() {
+        return false;
+    }
 }

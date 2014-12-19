@@ -35,4 +35,9 @@ public class Lion extends Member implements Behavior {
     public String getType() {
         return "Lion";
     }
+
+    @Override
+    public boolean checkAge() {
+        return this.age > 5;
+    }
 }

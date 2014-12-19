@@ -41,8 +41,7 @@ public class Main {
                 zoo.receive(type, name);
                 break;
             case 2:
-                zoo.feeding();
-                hospital.feeding();
+                feedingTime();
                 break;
             case 3:
                 zoo.memberInformation();
@@ -51,17 +50,27 @@ public class Main {
                 hospital.memberInformation();
                 break;
             case 5:
-                zoo.nextYear();
-                hospital.nextYear();
+                nextYear();
                 break;
             default:
                 return;
         }
         action++;
         if (action % 5 == 0) {
-            zoo.nextYear();
-            hospital.nextYear();
+            nextYear();
         }
         hospital.hospitalization(zoo.fiveAgeAnimal());
+    }
+
+    private static void nextYear() {
+        System.out.println("One Year Later");
+        zoo.nextYear();
+        hospital.nextYear();
+    }
+
+    private static void feedingTime() {
+        System.out.println("Zoo Meal Time");
+        zoo.feeding();
+        hospital.feeding();
     }
 }

@@ -41,35 +41,26 @@ public class Zoo implements Manage {
     }
 
     public void nextYear() {
-        System.out.println("One Year Later");
         for (Behavior behavior : zooMember) {
             behavior.growOld();
         }
-    }
-
-    public boolean checkAge(Behavior member) {
-        if (!(member instanceof Robot)
-                && ((Member)member).getAge() > 5) {
-            return true;
-        }
-        return false;
     }
 
     public ArrayList<Behavior> fiveAgeAnimal() {
         ArrayList<Behavior> fiveAge = new ArrayList();
         Behavior temp;
         for (Behavior behavior : zooMember) {
-            if (!(behavior instanceof Robot) && checkAge(behavior)) {
+            if (behavior.checkAge()) {
                 temp = behavior;
                 fiveAge.add(temp);
             }
         }
+        zooMember.removeAll(fiveAge);
         return fiveAge;
     }
 
     @Override
     public void feeding() {
-        System.out.println("Zoo Meal Time");
         for (Behavior behavior : zooMember) {
             behavior.eat();
         }

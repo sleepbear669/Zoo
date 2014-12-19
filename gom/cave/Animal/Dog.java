@@ -34,4 +34,9 @@ public  class Dog extends Member implements Behavior {
     public String getType() {
         return "Dog";
     }
+
+    @Override
+    public boolean checkAge() {
+        return this.age > 5;
+    }
 }

@@ -20,6 +20,11 @@ public class Owl extends Member implements Behavior {
     }
 
     @Override
+    public boolean checkAge() {
+        return this.age > 5;
+    }
+
+    @Override
     public void growOld() {
         this.age++;
     }
