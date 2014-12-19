@@ -23,8 +23,8 @@ public class Robot implements Life {
     }
 
     @Override
-    public String toString() {
-        return "gom.cave.Robot's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println("gom.cave.Robot's name is " + name + " Age is " + age);
     }
 
     public String getName() {

@@ -5,10 +5,6 @@ public abstract class Animal {
     String name;
     int age;
 
-    public abstract String toString();
-
-
-
     public abstract String getName();
 
     public abstract int getAge();

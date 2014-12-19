@@ -1,7 +1,7 @@
 package gom.cave;
 
 import java.util.ArrayList;
-import gom.cave.Animal.*;
+
 public class Hospital implements Manage{
     private ArrayList<Life> hospitalMember;
     private int count;
@@ -41,7 +41,7 @@ public class Hospital implements Manage{
         System.out.println("==========");
         System.out.println("<==========>");
         for (int i = 0; i < count; i++) {
-            System.out.println(hospitalMember.get(i).toString());
+            hospitalMember.get(i).memberInfo();
         }
         System.out.println("<==========>");
     }

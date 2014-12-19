@@ -13,8 +13,8 @@ public class Bear extends Animal implements Life{
         System.out.println("bear eat honey");
     }
 
-    public String toString() {
-        return "Bear's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println("Bear's name is " + name + " Age is " + age);
     }
 
     @Override

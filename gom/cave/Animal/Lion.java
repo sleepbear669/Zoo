@@ -11,8 +11,8 @@ public class Lion extends Animal implements Life {
         System.out.println("Lion eat meat");
     }
 
-    public String toString() {
-        return "Lion's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println("Lion's name is " + name + " Age is " + age);
     }
 
     @Override

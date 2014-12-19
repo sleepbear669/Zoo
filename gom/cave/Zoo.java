@@ -41,7 +41,7 @@ public class Zoo implements Manage {
         System.out.println("==========");
         System.out.println("<==========>");
         for (int i = 0; i < zooMember.size(); i++) {
-            System.out.println(zooMember.get(i).toString());
+            zooMember.get(i).memberInfo();
         }
         System.out.println("<==========>");
     }
@@ -71,10 +71,6 @@ public class Zoo implements Manage {
                 temp = ((Life) zooMember.get(i));
                 fiveAge.add(temp);
             }
-        }
-
-        synchronized (zooMember) {
-            zooMember.removeAll(fiveAge);
         }
 
         return fiveAge;

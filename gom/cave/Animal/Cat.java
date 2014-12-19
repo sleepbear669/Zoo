@@ -13,8 +13,8 @@ public class Cat extends Animal implements Life {
         System.out.println("Cat eat milk");
     }
 
-    public String toString() {
-        return "Cat's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println("Cat's name is " + name + " Age is " + age);
     }
 
     @Override

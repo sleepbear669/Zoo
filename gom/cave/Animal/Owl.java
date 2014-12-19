@@ -14,8 +14,8 @@ public class Owl extends Animal implements Life {
         System.out.println("Owl eat apple");
     }
 
-    public String toString() {
-        return "Owl's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println( "Owl's name is " + name + " Age is " + age);
     }
 
     @Override

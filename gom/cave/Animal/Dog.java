@@ -11,8 +11,8 @@ public  class Dog extends Animal implements Life {
         System.out.println("Dog eat bone");
     }
 
-    public String toString() {
-        return "Dog's name is " + name + " Age is " + age;
+    public void memberInfo() {
+        System.out.println("Dog's name is " + name + " Age is " + age);
     }
 
     @Override
@@ -24,7 +24,6 @@ public  class Dog extends Animal implements Life {
     public String getName() {
         return this.name;
     }
-
     @Override
     public int getAge() {
         return this.age;
