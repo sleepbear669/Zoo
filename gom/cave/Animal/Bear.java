@@ -1,8 +1,9 @@
 package gom.cave.Animal;
 
-import gom.cave.Life;
+import gom.cave.Member;
+import gom.cave.Behavior;
 
-public class Bear extends Animal implements Life{
+public class Bear extends Member implements Behavior {
 
     public Bear(String name) {
         this.name = name;

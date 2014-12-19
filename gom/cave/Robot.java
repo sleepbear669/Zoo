@@ -1,12 +1,8 @@
 package gom.cave;
 
-public class Robot implements Life {
+public class Robot implements Behavior {
     private String name;
     private int age;
-
-    public Robot() {
-        // TODO Auto-generated constructor stub
-    }
 
     Robot(String name) {
         this.name = name;
