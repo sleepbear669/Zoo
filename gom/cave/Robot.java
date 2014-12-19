@@ -1,6 +1,6 @@
 package gom.cave;
 
-public class Robot implements Behavior {
+public class Robot extends Member implements Behavior {
     private String name;
     private int age;
 
@@ -10,7 +10,7 @@ public class Robot implements Behavior {
     }
 
     public void eat() {
-        System.out.println("gom.cave.Robot Energy charging");
+        System.out.println("Robot Energy charging");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Robot implements Behavior {
 
     @Override
     public void memberInfo() {
-        System.out.println("gom.cave.Robot's name is " + name + " Age is " + age);
+        System.out.println("Robot's name is " + name + " Age is " + age);
     }
 
     public String getName() {
@@ -29,6 +29,11 @@ public class Robot implements Behavior {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String getType() {
+        return "Robot";
     }
 
 }

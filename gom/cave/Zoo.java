@@ -3,6 +3,7 @@ package gom.cave;
 import gom.cave.Animal.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Zoo implements Manage {
     private final ArrayList<Behavior> zooMember;
@@ -12,47 +13,43 @@ public class Zoo implements Manage {
     }
 
     public void receive(String type, String name) {
+        Behavior member;
         if (type.equals("bear")) {
-            Behavior bear = new Bear(name);
-            zooMember.add(bear);
+            member = new Bear(name);
         } else if (type.equals("cat")) {
-            Behavior cat = new Cat(name);
-            zooMember.add(cat);
+            member = new Cat(name);
         } else if (type.equals("dog")) {
-            Behavior dog = new Dog(name);
-            zooMember.add(dog);
+            member = new Dog(name);
         } else if (type.equals("lion")) {
-            Behavior lion = new Lion(name);
-            zooMember.add(lion);
+            member = new Lion(name);
         } else if (type.equals("owl")) {
-            Behavior owl = new Owl(name);
-            zooMember.add(owl);
+            member = new Owl(name);
         } else if (type.equals("robot")) {
-            Behavior robot = new Robot(name);
-            zooMember.add(robot);
+            member = new Robot(name);
         } else {
             System.out.println("잘못적음");
             return;
         }
+        zooMember.add(member);
     }
 
     public void memberInformation() {
         System.out.println("gom.cave.Zoo member information");
-        for (int i = 0; i < zooMember.size(); i++) {
-            zooMember.get(i).memberInfo();
+        for (Behavior behavior : zooMember) {
+            behavior.memberInfo();
         }
     }
 
     public void nextYear() {
         System.out.println("One Year Later");
-        for (int i = 0; i < zooMember.size(); i++) {
-            zooMember.get(i).growOld();
+        for (Behavior behavior : zooMember) {
+            behavior.growOld();
         }
     }
 
-    public boolean checkAge(int index) {
-        if (!(zooMember.get(index) instanceof Robot)
-                && ((Member) zooMember.get(index)).getAge() > 5) {
+    public boolean checkAge(Behavior member) {
+        if (!(member instanceof Robot)
+                && ((Member)member).getAge() > 5) {
             return true;
         }
         return false;
@@ -61,9 +58,9 @@ public class Zoo implements Manage {
     public ArrayList<Behavior> fiveAgeAnimal() {
         ArrayList<Behavior> fiveAge = new ArrayList();
         Behavior temp;
-        for (int i = 0; i < zooMember.size(); i++) {
-            if (!(zooMember.get(i) instanceof Robot) && checkAge(i)) {
-                temp = ((Behavior) zooMember.get(i));
+        for (Behavior behavior : zooMember) {
+            if (!(behavior instanceof Robot) && checkAge(behavior)) {
+                temp = behavior;
                 fiveAge.add(temp);
             }
         }
@@ -73,8 +70,8 @@ public class Zoo implements Manage {
     @Override
     public void feeding() {
         System.out.println("Zoo Meal Time");
-        for (int i = 0; i < zooMember.size(); i++) {
-            zooMember.get(i).eat();
+        for (Behavior behavior : zooMember) {
+            behavior.eat();
         }
     }
 }

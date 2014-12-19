@@ -12,11 +12,11 @@ public class Main {
         String commend = new String();
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            printMenu();
-            commend = scanner.next();
-            int key = Integer.parseInt(commend);
-            behavior(key);
-        }
+        printMenu();
+        commend = scanner.next();
+        int key = Integer.parseInt(commend);
+        behavior(key);
+    }
 
     }
 
